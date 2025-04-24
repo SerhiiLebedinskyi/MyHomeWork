@@ -16,6 +16,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s -%(message)s",
     handlers=[logging.FileHandler("shop.log"), logging.StreamHandler()],
 )
+logging.debug("debug")
+logging.info("info")
 
 # HEADER
 put_html("<h1>Welcome to our Fruit Shop<h1>")
