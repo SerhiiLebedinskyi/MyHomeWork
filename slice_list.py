@@ -1,6 +1,6 @@
-initial_list = [1, 2, 3, 4, 5]
+initial_list = [1, 2, 3]
 length_initial = len(initial_list)
-if length_initial <= 1:
+if length_initial == 0:
     first_list = second_list = initial_list
 else:
     half_length_initial = length_initial // 2
