@@ -14,7 +14,9 @@ if len(string_to_be_checked) > 0:
     valid_list.append(string_to_be_checked not in keyword.kwlist)
     valid_list.append(string_to_be_checked[0] not in string.digits)
     valid_list.append(
-        string_to_be_checked.islower() and string_to_be_checked.count("_") <= 1
+        string_to_be_checked.islower()
+        or len(string_to_be_checked) <= 1
+        and len(string_to_be_checked) == string_to_be_checked.count("_")
     )
     valid_list.append(
         all([char not in MY_STRING_PUNCTUATION for char in string_to_be_checked])
