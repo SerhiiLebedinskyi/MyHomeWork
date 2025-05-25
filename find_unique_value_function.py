@@ -1,11 +1,15 @@
-def find_unique_value(some_list):
-    count = {}
+def find_unique_value(some_list: list) -> int:
+    meets_once, several_times = set(), set()
+
     for value in some_list:
-        count.setdefault(value, 0)
-        count[value] += 1
-    for k, v in count.items():
-        if v == 1:
-            result = k
+        if value in several_times:
+            continue
+        if value in meets_once:
+            meets_once.remove(value)
+            several_times.add(value)
+        else:
+            meets_once.add(value)
+    result = meets_once.pop()
     return result
 
 
