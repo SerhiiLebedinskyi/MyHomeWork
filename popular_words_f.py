@@ -1,7 +1,8 @@
 def popular_words(text: str, words: list[str]) -> dict:
+    words_list_lower = text.lower().split("")
     result = {}
     for key in words:
-        result[key] = text.lower().split(" ").count(key)
+        result[key] = words_list_lower.count(key)
     return result
 
 
