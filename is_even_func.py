@@ -1,4 +1,4 @@
-def is_even(digit):
+def is_even(digit: int) -> bool:
     """Перевірка чи є парним число"""
     result = True if digit % 2 == 0 else False
     return result
